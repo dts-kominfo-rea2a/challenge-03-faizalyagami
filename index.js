@@ -21,10 +21,26 @@ const dataBelanjaan = [
 ];
 
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const listBelanjaan = null;
 
+const listBelanjaan = (Belanjaan) => {
+  let dataset = [];
+  let i = 0;
+  while(i < Belanjaan.length) {
+    dataset[i] =Belanjaan[i].nama + " x "+ Belanjaan[i].kuantitas;
+    i++;
+  }
+  return dataset;
+}
 // boleh dimodifikasi bila ingin menggunakan deklarasi fungsi yang normal
-const totalBelanjaan = null;
+const totalBelanjaan = (Belanjaan) => {
+  let sum = 0;
+  let i = 0;
+  while(i<Belanjaan.length) {
+    sum+= (Belanjaan[i].harga*Belanjaan[i].kuantitas);
+    i++;
+  }
+  return sum;
+};
 
 // ! JANGAN DIMODIFIKASI
 const main = () => {
